@@ -6,7 +6,7 @@
 
 body{
     height: 200vh;
-    background-color:rgb(4, 4, 4);
+    background-color:rgb(2, 2, 2);
     color: #fff;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
@@ -18,9 +18,9 @@ main{
     width: 100vw;
     margin: auto;
     background-image: 
-    radial-gradient(circle , rgba(255,255,255,0) 45%, rgb(0, 0, 0) 95%), linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
-    url(https://images.unsplash.com/photo-1473654729523-203e25dfda10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80); 
-    /* url(./images/iceland.jpg); */
+    radial-gradient(circle , rgba(255,255,255,0) 75%, rgb(0, 0, 0) 99%), linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
+    /* url(https://images.unsplash.com/photo-1473654729523-203e25dfda10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);  */
+     url(./images/iceland.jpg); 
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -86,9 +86,9 @@ nav{
 
 .explore{
     width: 80%;
-    margin: auto;
+    margin: 60px auto;
    text-align: center;
-   margin-top: 60px;
+   padding-top: 50px;
 }
 
 .explore__header{
@@ -173,4 +173,92 @@ nav{
 
 .explore__button:hover:after{
     width: 100%;
+}
+
+.adventures{
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.adventures__header{
+    font-size: 2.6rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.adventures__paragraph{
+    font-size: 1.4rem;
+    max-width: 820px;
+    margin: 40px auto;
+    line-height: 35px;
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.adventures__container{
+    display: flex;
+    margin-top: 100px;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+}
+
+.adventures__post{
+    margin: 25px;
+    max-width: 620px;
+}
+
+.adventures__img{
+    display: block;
+    margin: auto;
+    width: 580px;
+    height: 400px;
+    transition: all .5s ease-in-out;
+}
+
+.post-date{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.post-title{
+    font-family: 'Noto Serif', serif;
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+.post-info{
+    max-width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.adventures__button{
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.adventures__button:hover{
+    color: #fff;
+}
+
+.adventures__button:after{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.night-sky{
+    position: relative;
+    transform: translateY(-700px);
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    background-image: 
+    radial-gradient(circle , rgba(255, 255, 255, 0) 55%, rgb(0, 0, 0) 90%), linear-gradient(0deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
+     url(./images/nightsky.jpeg); 
+    background-size: cover;
+    z-index: -1;
 }

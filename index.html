@@ -16,9 +16,9 @@
 <body>
     <nav>
         <a href="#" class="nav__element">ABOUT</a>
-        <a href="#" class="nav__element">EXPLORE</a>
+        <a href="#explore" class="nav__element">EXPLORE</a>
         <i class="fas fa-fire nav__icon"></i>
-        <a href="#" class="nav__element">ADVENTURES</a>
+        <a href="#adventures" class="nav__element">ADVENTURES</a>
         <a href="#" class="nav__element">CONTACT</a>
     </nav>
     <main>
@@ -28,9 +28,10 @@
         </section>
     </main>
 
-    <section class="explore">
+    <section class="explore" id="explore">
         <h2 class="explore__header">Explore the World</h2>
-        <p class="explore__paragraph">We seek to provide the most authentic content from athletes, adventurers, explorers
+        <p class="explore__paragraph">We seek to provide the most authentic content from athletes, adventurers,
+            explorers
             and travellers around the world. Our long-term mission is to educate, inspire and enable all peoples to
             experience & protect wilderness.</p>
 
@@ -48,8 +49,35 @@
                 <p class="box__country">NEW ZELAND</p>
             </div>
         </div>
-        <button class="explore__button">SEE MORE <i class="fas fa-angle-right "></i></button>
+        <button class="explore__button">See More <i class="fas fa-angle-right "></i></button>
     </section>
+
+    <section class="adventures" id="adventures">
+        <h2 class="adventures__header">Adventures</h2>
+        <p class="adventures__paragraph">Our favourite stories about traveling and exploring amazing places, read about
+            opportunities and how to get involved in great experiences</p>
+        <div class="adventures__container">
+
+            <div class="adventures__post">
+                <img src="./images/bus.jpeg" alt="bus" class="adventures__img">
+                <p class="post-date">MAY 30, 2020</p>
+                <h3 class="post-title">Van Life Adventures</h3>
+                <p class="post-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa pariatur
+                    laboriosam blanditiis.</p>
+            </div>
+
+            <div class="adventures__post">
+                <img src="./images/hiking.jpeg" alt="hiking" class="adventures__img">
+                <p class="post-date">JULY 21, 2020</p>
+                <h3 class="post-title">Journey of life</h3>
+                <p class="post-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa pariatur
+                    laboriosam blanditiis.</p>
+            </div>
+        </div>
+        <button class="explore__button adventures__button">All Posts <i class="fas fa-angle-right "></i></button>
+    </section>
+    
+    <section class="night-sky"></section>
 </body>
 
 </html>
