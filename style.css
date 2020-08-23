@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 200vh;
+    height: 150vh;
     background-color:rgb(2, 2, 2);
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -30,21 +30,24 @@ main{
 }
 
 .hero__header{
+    position: relative;
     font-family: 'Noto Serif', serif;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 300;
     color: rgb(255, 255, 255);
     font-style: italic;
-    transform: translateY(-100px);
+    bottom: 80px;
 }
 
 .hero__paragraph{
+    position: relative;
     font-family: 'Noto Serif', serif;
     font-size: 1.8rem;
-    transform: translateY(-100px) translateX(30%);
     font-style: italic;
     font-weight: 400;
     letter-spacing: 1px;
+    bottom: 80px;
+    left: 180px;
 }
 
 nav{
@@ -155,6 +158,7 @@ nav{
     color: rgb(26, 98, 139);
     border: none;
     transition:  all .5s ease;
+    outline: none;
 }
 
 .explore__button:hover{
@@ -207,14 +211,67 @@ nav{
     margin: 25px;
     max-width: 620px;
 }
-
+/**/
 .adventures__img{
+    position: relative;
     display: block;
     margin: auto;
     width: 580px;
     height: 400px;
     transition: all .5s ease-in-out;
+    background-image: linear-gradient(rgb(2, 2, 2), #fff);
+    transform: translateX(20px);
 }
+
+.container {
+    position: relative;
+    width: 580px;
+    height: 400px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    transform: translateX(20px);
+  }
+  
+  .container:hover .overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.37);
+  }
+  
+  .button {
+    position: absolute;
+    width: 620px;
+    left:0;
+    top: 300px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .35s ease-in-out;
+  }
+  
+  .button a {
+    width: 100px;
+    padding: 12px 38px;
+    text-align: center;
+    color: white;
+    border: solid 2px white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  
+  .container:hover .button {
+    opacity: 1;
+  }
+
+  /**/
 
 .post-date{
     font-size: 1.2rem;
@@ -240,6 +297,7 @@ nav{
 
 .adventures__button{
     color: rgba(255, 255, 255, 0.692);
+    outline: none;
 }
 
 .adventures__button:hover{
@@ -262,3 +320,37 @@ nav{
     background-size: cover;
     z-index: -1;
 }
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(14, 14, 14);
+    bottom: 700px;
+}
+
+.footer__container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+.media-icon{
+    padding: 10px 10px;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.copyright{
+    color: rgba(180, 180, 180, 0.774);
+}
+
+.phone{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+  
