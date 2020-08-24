@@ -47,7 +47,7 @@ main{
     font-weight: 400;
     letter-spacing: 1px;
     bottom: 80px;
-    left: 180px;
+    left: 180px; 
 }
 
 nav{
@@ -208,8 +208,12 @@ nav{
 }
 
 .adventures__post{
+    display: flex;
     margin: 25px;
     max-width: 620px;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-content: center;
 }
 /**/
 .adventures__img{
@@ -220,7 +224,6 @@ nav{
     height: 400px;
     transition: all .5s ease-in-out;
     background-image: linear-gradient(rgb(2, 2, 2), #fff);
-    transform: translateX(20px);
 }
 
 .container {
@@ -237,7 +240,6 @@ nav{
     height: 100%;
     background: rgba(0, 0, 0, 0);
     transition: all 0.5s ease-in-out;
-    transform: translateX(20px);
   }
   
   .container:hover .overlay {
@@ -370,7 +372,7 @@ footer{
     font-size: 2.6rem;
     font-weight: 400;
     letter-spacing: 1px;
-    transform: translateY(-20px);
+    margin-bottom: 20px;
 }
 
 .contact p{
@@ -418,4 +420,128 @@ transition: all .5s ease;
 
 .form__submit:hover{
     transform: scale(1.1);
+}
+
+@media (max-width: 1680px){
+    .adventures{
+        width: 100%;
+    }
+
+    .explore__box{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1400px){
+    .adventures__post{
+        margin: 10px;
+        max-width: 620px;
+    }
+
+    .night-sky{
+        width: 100%;
+        background-position: center;
+    }
+
+    .contact{
+        width: 60%;
+    }
+
+    .footer__container{
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 876px){
+    .explore{
+        padding-top: 0px;
+    }
+
+    .adventures{
+        padding-top: 0px;
+    }
+
+    .adventures__post{
+        width: 60%;
+    }
+
+    .adventures__img{
+        position: absolute;
+        width: 400px;
+        height: 280px;
+        transform: translate(-10px,10px);
+    }
+    .adventures__paragraph{
+        width: 80%;
+    }
+
+    .overlay{
+        width: 400px;
+        height: 280px;
+        transform: translate(-10px, 10px);
+    }
+
+    .container{
+        width: 380px;
+        height: 300px;
+    } 
+
+    .hero__paragraph{
+        left: 10px;
+    }
+
+    .hero__header{
+        font-size: 4rem;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .button{
+        transform: translate(-115px,-60px);
+    }
+
+    .button a{
+        width: 80px;
+    }
+
+    .contact{
+        width: 90%;
+    }
+
+    footer{
+        height: 120px;
+    }
+
+    .footer__container{
+        width: 90%;
+        flex-flow: column;
+    }
+
+    .media-icon{
+        font-size:1rem;
+    }
+}
+
+@media (max-width: 650px){
+    .explore__box{
+        width: 280px;
+        max-height: 420px;
+    }
+
+    .post-info1{
+        transform: translateY(-20px);
+    }
+
+    .adventures__button{
+        transform: translateY(40px);
+    }
+}
+
+@media(max-width:560px){
+    .form__element:nth-of-type(1), .form__element:nth-of-type(2){
+        width: 90%;
+    }
 }
