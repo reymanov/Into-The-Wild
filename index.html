@@ -18,12 +18,28 @@
 
 <body>
     <nav>
-        <a href="#" class="nav__element">ABOUT</a>
-        <a href="#explore" class="nav__element">EXPLORE</a>
-        <i class="fas fa-fire nav__icon"></i>
-        <a href="#adventures" class="nav__element">ADVENTURES</a>
-        <a href="#contact" class="nav__element">CONTACT</a>
+        <a href="#" class="nav__element nav__element--underline">ABOUT US</a>
+        <a href="#explore" class="nav__element nav__element--underline">EXPLORE</a>
+        <i class="fas fa-fire nav__icon nav__element"></i>
+        <a href="#adventures" class="nav__element nav__element--underline">ADVENTURES</a>
+        <a href="#contact" class="nav__element nav__element--underline">CONTACT</a>
     </nav>
+    <aside>
+        <button class="hamburger">
+            <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+            </span>
+        </button>
+
+        <div class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#">ABOUT</a></li>
+                <li class="navigation__item"><a href="#explore">EXPLORE</a></li>
+                <li class="navigation__item"><a href="#adventures">ADVENTURES</a></li>
+                <li class="navigation__item"><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </aside>
     <main>
         <section class="hero">
             <h1 class="hero__header" data-aos="fade-right" data-aos-duration="2000">Into The Wild</h1>
@@ -92,7 +108,7 @@
     <section class="contact" id="contact">
         <h2 data-aos="fade-up" data-aos-duration="2000">Contact Us</h2>
         <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">Do not be afraid to ask questions</p>
-        <form action="post" class="form">
+        <form action="post" class="form" autocomplete="off">
             <input type="text" id="fname" name="fname" class="form__element" placeholder="Your Name"required>
             <input type="email" id="email" name="email" class="form__element" placeholder="Your Email" required>
             <input type="textarea" rows="3" id="message" name="message" class="form__element" placeholder="Your Message"required>

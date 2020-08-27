@@ -53,11 +53,14 @@ main{
 nav{
     position: absolute;
     display: flex;
-    width: 60%;
+    width: 90%;
     height: 60px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    transform: translateX(35%) translateY(40px);
+    top: 20px;
+    left: 55px;
+    right: 0;
+    margin: auto;
 }
 
 .nav__element{
@@ -74,7 +77,8 @@ nav{
     color: rgba(255, 255, 255, 0.876);
 }
 
-.nav__element:after{
+
+.nav__element--underline:after{
     content: '';
     display: block;
     border-bottom: 3px solid white;
@@ -83,8 +87,118 @@ nav{
     transition: .5s ease;;
 }
 
-.nav__element:hover:after{
+.nav__element--underline:hover:after{
     width: 100%;
+}
+
+.hamburger{
+    display: none;
+    position: absolute;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: 0;
+    transition: transform .3s .1s ease-in-out;
+    transform: translatex(0px);
+    z-index: 2;
+    outline: none;
+    cursor: pointer;
+}
+
+/* .hamburger--active {
+    transform: translatex(-250px);
+  } */
+
+.hamburger__box{
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger__inner{
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .1s .1s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: transform .2s .1s ease-in-out;
+    
+}
+
+.hamburger__inner::before{
+    top: -10px;
+}
+
+.hamburger__inner::after{
+    top: 10px;
+}
+
+.hamburger--active .hamburger__inner{
+    background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner:before{
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner:after{
+    transform:translateY(-10px) rotate(-45deg) ;
+}
+
+.navigation{
+    display: flex;
+    height: 100vh;
+    width: 250px;
+    background-color: #0f0f0f;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(250px);
+    transition: transform .3s .1s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.navigation--active{
+    transform: translateX(0px);
+}
+
+.navigation__list{
+    list-style-type: none;
+}
+
+.navigation__item{
+    width: 100%;
+    margin: 25px 0 25px 0;
+    font-size: 1.1rem;
+}
+
+.navigation__item a{
+    display: block;
+    width: 150px;
+    padding: 20px;
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .explore{
@@ -215,7 +329,7 @@ nav{
     justify-items: center;
     align-content: center;
 }
-/**/
+
 .adventures__img{
     position: relative;
     display: block;
@@ -250,7 +364,7 @@ nav{
   .button {
     position: absolute;
     width: 620px;
-    left:0;
+    left:-20px;
     top: 300px;
     text-align: center;
     opacity: 0;
@@ -391,7 +505,7 @@ footer{
     width: 90%;
     height: 40px;
     margin: 25px 15px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgb(0, 0, 0);
     border: none;
     border-bottom: 1px rgb(255, 255, 255) solid;
     color: rgb(255, 255, 255);
@@ -413,9 +527,9 @@ footer{
     border: 1px #fff solid;
     color: #fff;
     font-weight: 500;
-font-size: 1.1rem;
-cursor: pointer;
-transition: all .5s ease;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all .5s ease;
 }
 
 .form__submit:hover{
@@ -499,8 +613,13 @@ transition: all .5s ease;
         display: none;
     }
 
+    .hamburger{
+        display: inline-block;
+    }
+
     .button{
-        transform: translate(-115px,-60px);
+        /* left:0px; */
+        transform: translate(-95px,-60px);
     }
 
     .button a{
@@ -543,5 +662,10 @@ transition: all .5s ease;
 @media(max-width:560px){
     .form__element:nth-of-type(1), .form__element:nth-of-type(2){
         width: 90%;
+    }
+
+    .button{
+        left: 180px;
+        width: 200px;
     }
 }
