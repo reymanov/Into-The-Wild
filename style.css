@@ -565,6 +565,14 @@ footer{
         width: 70%;
     }
 
+    .explore__container{
+        width: 100%;
+    }
+
+    .explore__box{
+        zoom: 0.8;
+    }
+
 }
 
 @media (max-width: 876px){
@@ -584,16 +592,23 @@ footer{
         position: absolute;
         width: 400px;
         height: 280px;
-        transform: translate(-10px,10px);
+        transform: translate(10px,10px);
     }
     .adventures__paragraph{
         width: 80%;
+        margin: auto;
+    }
+    .adventures__header{
+        margin: auto;
+    }
+    .post-date{
+        margin: auto;
     }
 
     .overlay{
         width: 400px;
         height: 280px;
-        transform: translate(-10px, 10px);
+        transform: translate(10px, 10px);
     }
 
     .container{
@@ -618,8 +633,8 @@ footer{
     }
 
     .button{
-        /* left:0px; */
-        transform: translate(-95px,-60px);
+        width: 50%;
+        transform: translate(135px,-75px);
     }
 
     .button a{
@@ -664,8 +679,53 @@ footer{
         width: 90%;
     }
 
+    .overlay{
+        display: none;
+    }
+
+    .container{
+        background-image: url(./images/bus.jpeg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: auto;
+        min-width: 300px;
+        zoom: 0.7;
+    }
+
+    .adventures__paragraph{
+        font-size: 1.2rem;
+    }
+
+    .adventures__container{
+        width: 100%;
+    }
+
+    .hero__header{
+        font-size: 2.8rem;
+    }
+
+    .hero__paragraph{
+        font-size: 1.4rem;
+    }
+
     .button{
-        left: 180px;
-        width: 200px;
+        display: none;
+    }
+
+    .box__place{
+        font-size: 1.6rem;
+    }
+
+    .explore__paragraph{
+        font-size: 1.2rem;
+    }
+
+    .adventures__img{
+        display: none;
+    }
+
+    .post-info{
+       font-size: 1rem;
     }
 }
