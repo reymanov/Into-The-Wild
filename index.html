@@ -9,16 +9,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
         integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
     <nav>
-        <a href="#" class="nav__element nav__element--underline">ABOUT US</a>
+        <a href="#about" class="nav__element nav__element--underline">ABOUT US</a>
         <a href="#explore" class="nav__element nav__element--underline">EXPLORE</a>
         <i class="fas fa-fire nav__icon nav__element"></i>
         <a href="#adventures" class="nav__element nav__element--underline">ADVENTURES</a>
@@ -33,23 +33,52 @@
 
         <div class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#">ABOUT</a></li>
-                <li class="navigation__item"><a href="#explore">EXPLORE</a></li>
-                <li class="navigation__item"><a href="#adventures">ADVENTURES</a></li>
-                <li class="navigation__item"><a href="#contact">CONTACT</a></li>
+                <li class="navigation__item"><a href="#about" class="navigation__link">ABOUT</a></li>
+                <li class="navigation__item"><a href="#explore" class="navigation__link">EXPLORE</a></li>
+                <li class="navigation__item"><a href="#adventures" class="navigation__link">ADVENTURES</a></li>
+                <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACT</a></li>
             </ul>
         </div>
     </aside>
     <main>
         <section class="hero">
             <h1 class="hero__header" data-aos="fade-right" data-aos-duration="2000">Into The Wild</h1>
-            <p class="hero__paragraph" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="800" >Let the adventure begin ...</p>
+            <p class="hero__paragraph" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="800">Let the
+                adventure begin ...</p>
         </section>
     </main>
 
+    <section class="about" id="about">
+        <div class="about__container">
+            <div class="about__box">
+                <h1 class="about__header" data-aos="fade-up" data-aos-duration="1000">Who are we ?</h1>
+                <p class="about__text" data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. Porro mollitia, quod nam harum quis iure, temporibus nobis
+                    repellendus, quos saepe voluptates. Ipsa ab eos eveniet consequuntur magni labore. Mollitia, magnam
+                    voluptatibus maiores perspiciatis fugit laboriosam!</p>
+            </div>
+            <div class="about__team">
+                <div class="about__person">
+                    <div class="person__img person__isabel"></div>
+                    <h2 class="person__name">Isabel</h2>
+                </div>
+                <div class="about__person">
+                    <div class="person__img person__jon"></div>
+                    <h2 class="person__name">Jon</h2>
+                </div>
+                <div class="about__person">
+                    <div class="person__img person__vivienne"></div>
+                    <h2 class="person__name">Vivienne</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about__img" data-aos="fade-in" data-aos-duration="3000" data-aos-delay="200"></div>
+    </section>
+
     <section class="explore" id="explore">
         <h2 class="explore__header" data-aos="fade-up" data-aos-duration="1000">Explore the World</h2>
-        <p class="explore__paragraph" data-aos="fade-up" data-aos-duration="2000">We seek to provide the most authentic content from athletes, adventurers,
+        <p class="explore__paragraph" data-aos="fade-up" data-aos-duration="2000">We seek to provide the most authentic
+            content from athletes, adventurers,
             explorers
             and travellers around the world. Our long-term mission is to educate, inspire and enable all peoples to
             experience & protect wilderness.</p>
@@ -73,7 +102,8 @@
 
     <section class="adventures" id="adventures">
         <h2 class="adventures__header" data-aos="fade-up" data-aos-duration="1000">Adventures</h2>
-        <p class="adventures__paragraph" data-aos="fade-up" data-aos-duration="2000">Our favourite stories about traveling and exploring amazing places, read about
+        <p class="adventures__paragraph" data-aos="fade-up" data-aos-duration="2000">Our favourite stories about
+            traveling and exploring amazing places, read about
             opportunities and how to get involved in great experiences</p>
         <div class="adventures__container">
 
@@ -85,12 +115,13 @@
                 </div>
                 <p class="post-date">MAY 30, 2020</p>
                 <h3 class="post-title">Van Life Adventures</h3>
-                <p class="post-info post-info1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa pariatur
+                <p class="post-info post-info1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsa
+                    pariatur
                     laboriosam blanditiis.</p>
             </div>
 
             <div class="adventures__post">
-                <div class="container">
+                <div class="container container-1">
                     <img src="./images/hiking.jpeg" alt="hiking" class="adventures__img">
                     <div class="overlay"></div>
                     <div class="button"><a href="#"> READ MORE </a></div>
@@ -109,9 +140,10 @@
         <h2 data-aos="fade-up" data-aos-duration="2000">Contact Us</h2>
         <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">Do not be afraid to ask questions</p>
         <form action="post" class="form">
-            <input type="text" id="fname" name="fname" class="form__element" placeholder="Your Name"required>
+            <input type="text" id="fname" name="fname" class="form__element" placeholder="Your Name" required>
             <input type="email" id="email" name="email" class="form__element" placeholder="Your Email" required>
-            <input type="textarea" rows="3" id="message" name="message" class="form__element" placeholder="Your Message"required>
+            <input type="textarea" rows="3" id="message" name="message" class="form__element" placeholder="Your Message"
+                required>
             <input type="submit" value="SEND" class="form__submit">
         </form>
     </section>
@@ -130,8 +162,8 @@
     <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({once:"true"});
-      </script>
+        AOS.init({ once: "true" });
+    </script>
 </body>
 
 </html>

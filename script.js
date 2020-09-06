@@ -19,3 +19,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
     
     hamburger.addEventListener('click', handleClick);
+
+    const navList = document.querySelector('.navigation__list');
+    const navLink = navList.querySelectorAll('.navigation__link');
+
+    navLink.forEach(element => {
+      element.addEventListener('click', () => {
+      hamburger.classList.remove('hamburger--active');
+      nav.classList.remove('navigation--active');
+    })
+    });
+    
