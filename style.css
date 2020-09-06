@@ -17,8 +17,7 @@ main{
     height: 100vh;
     width: 100vw;
     margin: auto;
-    background-image: 
-    radial-gradient(circle , rgba(255,255,255,0) 75%, rgb(0, 0, 0) 99%), linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
     /* url(https://images.unsplash.com/photo-1473654729523-203e25dfda10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);  */
      url(./images/iceland.jpg); 
     background-size: cover;
@@ -286,13 +285,17 @@ nav{
 }
 
 .about__img{
-    width: 700px;
-    height: 500px;
+    position: relative;
+    width: 800px;
+    height: 600px;
     background-image: 
-    radial-gradient(circle , rgba(255,255,255,0) 45%, rgb(0, 0, 0) 85%), 
+    radial-gradient(circle , rgba(255,255,255,0) 45%, rgb(0, 0, 0) 75%),
+    linear-gradient(180deg, rgba(255,255,255,0) 85%, rgba(0, 0, 0, 0.952) 90%),
+    linear-gradient(0deg, rgba(255,255,255,0) 80%, rgba(0, 0, 0, 0.952) 90%) ,
     url(./images/camera.jpeg);
     background-position: center;
     background-size: cover;
+    z-index: -1;
 }
 
 
@@ -388,6 +391,8 @@ nav{
     width: 100%;
 }
 
+/*  ---------------------------   */
+
 .adventures{
     width: 80%;
     margin: 100px auto;
@@ -416,96 +421,52 @@ nav{
     justify-content: space-evenly;
 }
 
-.adventures__post{
-    display: flex;
-    margin: 25px;
-    max-width: 620px;
-    flex-flow: column wrap;
-    justify-items: center;
-    align-content: center;
+.adventures__box{
+    width: 600px;
+    height: 500px;
 }
 
 .adventures__img{
-    position: relative;
-    display: block;
+    width: 550px;
+    height: 360px;
     margin: auto;
-    width: 580px;
-    height: 400px;
-    transition: all .5s ease-in-out;
-    background-image: linear-gradient(rgb(2, 2, 2), #fff);
+    background-size: cover;
+    background-position: center;
 }
 
-.container {
-    position: relative;
-    width: 580px;
-    height: 400px;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .container:hover .overlay {
-    display: block;
-    background: rgba(0, 0, 0, 0.37);
-  }
-  
-  .button {
-    position: absolute;
-    width: 620px;
-    left:-20px;
-    top: 300px;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease-in-out;
-  }
-  
-  .button a {
-    width: 100px;
-    padding: 12px 38px;
-    text-align: center;
-    color: white;
-    border: solid 2px white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-
-  .container:hover .button {
-    opacity: 1;
-  }
-
-.post-date{
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 30px;
-    color: rgba(255, 255, 255, 0.692);
+.bus-img{
+    background-image: url(./images/bus.jpeg);
 }
 
-.post-title{
-    font-family: 'Noto Serif', serif;
-    font-size: 2rem;
+.hike-img{
+    background-image: url(./images/hiking.jpeg);
+}
+
+.adventures__date{
     margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(218, 218, 218);
 }
 
-.post-info{
-    max-width: 80%;
-    margin: auto;
+.adventures__title{
+    margin-top: 15px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.adventures__info{
+    width: 80%;
+    margin: 10px auto;
     font-size: 1.2rem;
-    font-weight: 600;
-    margin-top: 30px;
-    color: rgba(255, 255, 255, 0.692);
+    font-weight: 500;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.822);
 }
 
 .adventures__button{
-    color: rgba(255, 255, 255, 0.692);
-    outline: none;
+    margin-top: 20px;
+    color: rgb(218, 218, 218);
 }
 
 .adventures__button:hover{
@@ -515,6 +476,8 @@ nav{
 .adventures__button:after{
     border-bottom: 2px solid rgb(255, 255, 255);
 }
+
+/*  ---------------------------   */
 
 .night-sky{
     position: relative;
@@ -642,17 +605,9 @@ footer{
 
 @media (max-width: 1400px){
     .about__img{
-        width: 600px;
-        height: 400px;
-        background-image: 
-        radial-gradient(circle , rgba(255,255,255,0) 55%, rgb(0, 0, 0) 75%), 
-        url(./images/camera.jpeg);
+        width: 640px;
+        height: 440px;
         margin-top: 60px;
-    }
-
-    .adventures__post{
-        margin: 10px;
-        max-width: 620px;
     }
 
     .night-sky{
@@ -676,6 +631,37 @@ footer{
         zoom: 0.8;
     }
 
+    .adventures__container{
+        zoom: 0.9;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .adventures__container{
+        zoom: 0.7;
+    }
+
+    .night-sky{
+        background-image: linear-gradient(180deg, rgba(255,255,255,0) 80%, rgba(0, 0, 0, 0.952) 95%),
+         linear-gradient(0deg, rgba(255,255,255,0) 60%, rgba(0, 0, 0, 0.952) 90%), 
+         url(./images/nightsky.jpeg); 
+    }
+
+    .about{
+        box-sizing: content-box;
+        padding-bottom: 120px;
+        padding-top: 100px;
+        height: 800px;
+    }
+
+    .about__img{
+        transform: translateY(100px);
+    }
+
+    .hero__header{
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 876px){
@@ -683,56 +669,8 @@ footer{
         padding-top: 0px;
     }
 
-    .adventures{
-        padding-top: 0px;
-    }
-
-    .adventures__post{
-        width: 60%;
-    }
-
-    .post-title{
-        transform: translateX(10px);
-    }
-
-    .post-info{
-        transform: translateX(10px);
-    }
-
-    .adventures__img{
-        position: absolute;
-        width: 400px;
-        height: 280px;
-        transform: translate(10px,10px);
-    }
-    .adventures__paragraph{
-        width: 80%;
-        margin: auto;
-    }
-    .adventures__header{
-        margin: auto;
-    }
-    .post-date{
-        margin: auto;
-    }
-
-    .overlay{
-        width: 400px;
-        height: 280px;
-        transform: translate(10px, 10px);
-    }
-
-    .container{
-        width: 380px;
-        height: 300px;
-    } 
-
     .hero__paragraph{
         left: 10px;
-    }
-
-    .hero__header{
-        font-size: 4rem;
     }
 
     nav{
@@ -741,15 +679,6 @@ footer{
 
     .hamburger{
         display: inline-block;
-    }
-
-    .button{
-        width: 50%;
-        transform: translate(135px,-75px);
-    }
-
-    .button a{
-        width: 80px;
     }
 
     .contact{
@@ -767,6 +696,18 @@ footer{
 
     .media-icon{
         font-size:1rem;
+    }
+
+    .adventures__paragraph{
+        width: 80%;
+    }
+
+    .adventures__container{
+        zoom: 0.6;
+    }
+
+    .adventures__box{
+        margin: 20px auto;
     }
 }
 
@@ -789,24 +730,8 @@ footer{
         max-height: 420px;
     }
 
-    .post-info1{
-        transform: translateY(20px);
-    }
-
     .adventures__button{
         transform: translateY(40px);
-    }
-
-    .post-title{
-        transform: translateX(20px);
-    }
-
-    .post-info{
-        transform: translateX(20px);
-    }
-
-    .post-date{
-        transform: translateX(20px);
     }
 }
 
@@ -849,31 +774,18 @@ footer{
         width: 90%;
     }
 
-    .overlay{
-        display: none;
-    }
-
-    .container{
-        background-image: url(./images/bus.jpeg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin: auto;
-        min-width: 300px;
-        zoom: 0.7;
-    }
-
-    .container-1{
-        background-image: url(./images/hiking.jpeg);
+    .adventures__header{
+        font-size: 2rem;
     }
 
     .adventures__paragraph{
-        font-size: 1.2rem;
-        margin-top: 50px;
+        font-size: 1rem;
+        margin-top: 20px;
     }
 
     .adventures__container{
         width: 100%;
+        zoom: 0.5;
     }
 
     .hero__header{
@@ -884,10 +796,6 @@ footer{
         font-size: 1.4rem;
     }
 
-    .button{
-        display: none;
-    }
-
     .box__place{
         font-size: 1.6rem;
     }
@@ -896,25 +804,4 @@ footer{
         font-size: 1.2rem;
     }
 
-    .adventures__img{
-        display: none;
     }
-
-    .post-info{
-       font-size: 1rem;
-       transform: translateX(5px) translateY(-10px);
-    }
-
-    .post-info1{
-        transform:translateY(-10px)
-    }
-
-    .post-title{
-        transform: translateX(5px);
-    }
-
-    .post-date{
-        transform: translateX(0px);
-    }
-
-}
