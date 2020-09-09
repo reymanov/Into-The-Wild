@@ -49,6 +49,45 @@ main{
     left: 180px; 
 }
 
+.scroll-downs {
+    position: absolute;
+    top:  75vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    
+    width :34px;
+    height: 55px;
+  }
+
+  .mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+  }
+
+  .scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes scroll {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
+
 nav{
     position: absolute;
     display: flex;
@@ -81,7 +120,7 @@ nav{
     content: '';
     display: block;
     border-bottom: 3px solid white;
-    width: 0;
+    width: 0px;
     transform: translateY(5px);
     transition: .5s ease;;
 }
@@ -95,7 +134,7 @@ nav{
     position: absolute;
     position: fixed;
     right: 20px;
-    top: 20px;
+    margin-top: 20px;
     padding: 10px;
     background-color: transparent;
     border: 0;
@@ -435,11 +474,35 @@ nav{
 }
 
 .bus-img{
-    background-image: url(./images/bus.jpeg);
+    background-image:linear-gradient(180deg, rgba(255,255,255,0) 40%, rgba(0, 0, 0, 0.829) 90%),
+     url(./images/bus.jpeg);
 }
 
 .hike-img{
-    background-image: url(./images/hiking.jpeg);
+    background-image:linear-gradient(180deg, rgba(255,255,255,0) 40%, rgba(0, 0, 0, 0.829) 90%),
+     url(./images/hiking.jpeg);
+}
+
+.adventure__img-button{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 30%;
+    height: 15%;
+    transform: translateY(260px);
+    background:none;
+    border: 2px rgb(202, 202, 202) solid;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(202, 202, 202);
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+.adventure__img-button:hover{
+    border: 2px #fff solid;
+    color: #fff;
+    cursor: pointer;
 }
 
 .adventures__date{
@@ -703,7 +766,7 @@ footer{
     }
 
     .adventures__container{
-        zoom: 0.6;
+        zoom: 0.8;
     }
 
     .adventures__box{
@@ -728,10 +791,6 @@ footer{
     .explore__box{
         width: 280px;
         max-height: 420px;
-    }
-
-    .adventures__button{
-        transform: translateY(40px);
     }
 }
 
@@ -785,7 +844,7 @@ footer{
 
     .adventures__container{
         width: 100%;
-        zoom: 0.5;
+        zoom: 0.6;
     }
 
     .hero__header{
@@ -804,4 +863,10 @@ footer{
         font-size: 1.2rem;
     }
 
+    }
+
+    @media(max-width:350px){
+        .adventures__container{
+            zoom: 0.5;
+        }
     }

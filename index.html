@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
         integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -24,6 +23,7 @@
         <a href="#adventures" class="nav__element nav__element--underline">ADVENTURES</a>
         <a href="#contact" class="nav__element nav__element--underline">CONTACT</a>
     </nav>
+
     <aside>
         <button class="hamburger">
             <span class="hamburger__box">
@@ -33,18 +33,25 @@
 
         <div class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#about" class="navigation__link">ABOUT</a></li>
-                <li class="navigation__item"><a href="#explore" class="navigation__link">EXPLORE</a></li>
-                <li class="navigation__item"><a href="#adventures" class="navigation__link">ADVENTURES</a></li>
-                <li class="navigation__item"><a href="#contact" class="navigation__link">CONTACT</a></li>
+                <li class="navigation__item navigation__link"><a href="#about">ABOUT</a></li>
+                <li class="navigation__item navigation__link"><a href="#explore">EXPLORE</a></li>
+                <li class="navigation__item navigation__link"><a href="#adventures">ADVENTURES</a></li>
+                <li class="navigation__item navigation__link"><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
     </aside>
+
     <main>
         <section class="hero">
             <h1 class="hero__header" data-aos="fade-right" data-aos-duration="2000">Into The Wild</h1>
             <p class="hero__paragraph" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="800">Let the
                 adventure begin ...</p>
+
+                <div class="scroll-downs">
+                    <div class="mousey">
+                      <div class="scroller"></div>
+                    </div>
+                  </div>
         </section>
     </main>
 
@@ -57,15 +64,15 @@
                     repellendus, quos saepe voluptates. Ipsa ab eos eveniet consequuntur magni labore.</p>
             </div>
             <div class="about__team">
-                <div class="about__person">
+                <div class="about__person" data-aos="fade-right" data-aos-duration="1500">
                     <div class="person__img person__isabel"></div>
                     <h2 class="person__name">Isabel</h2>
                 </div>
-                <div class="about__person">
+                <div class="about__person" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
                     <div class="person__img person__jon"></div>
                     <h2 class="person__name">Jon</h2>
                 </div>
-                <div class="about__person">
+                <div class="about__person" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                     <div class="person__img person__vivienne"></div>
                     <h2 class="person__name">Vivienne</h2>
                 </div>
@@ -104,28 +111,34 @@
         <p class="adventures__paragraph" data-aos="fade-up" data-aos-duration="2000">Our favourite stories about
             traveling and exploring amazing places, read about
             opportunities and how to get involved in great experiences</p>
-        <div class="adventures__container">
+        <div class="adventures__container" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
             <div class="adventures__box">
-                <div class="adventures__img bus-img"></div>
+                <div class="adventures__img bus-img">
+                    <button class="adventure__img-button">READ MORE</button>
+                </div>
                 <p class="adventures__date">MAY 30, 2020</p>
                 <h3 class="adventures__title">Van Life Adventures</h3>
-                <p class="adventures__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ea dignissimos pariatur labore nisi. In!</p>
+                <p class="adventures__info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur ea
+                    dignissimos pariatur labore nisi. In!</p>
             </div>
 
             <div class="adventures__box">
-                <div class="adventures__img hike-img"></div>
+                <div class="adventures__img hike-img">
+                    <button class="adventure__img-button">READ MORE</button>
+                </div>
                 <p class="adventures__date">JULY 21, 2020</p>
                 <h3 class="adventures__title">Journey of life</h3>
-                <p class="adventures__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos veniam illum et blanditiis eum quae.</p>
+                <p class="adventures__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos veniam
+                    illum et blanditiis eum quae.</p>
             </div>
         </div>
         <button class="explore__button adventures__button">All Posts <i class="fas fa-angle-right "></i></button>
     </section>
 
-    <section class="night-sky"></section>
+    <div class="night-sky"></div>
     <section class="contact" id="contact">
-        <h2 data-aos="fade-up" data-aos-duration="2000">Contact Us</h2>
-        <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">Do not be afraid to ask questions</p>
+        <h2>Contact Us</h2>
+        <p>Do not be afraid to ask questions</p>
         <form action="post" class="form">
             <input type="text" id="fname" name="fname" class="form__element" placeholder="Your Name" required>
             <input type="email" id="email" name="email" class="form__element" placeholder="Your Email" required>
@@ -146,11 +159,7 @@
             <p class="phone"> +00 101 010 </p>
         </div>
     </footer>
-    <script src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: "true" });
-    </script>
+    <script src="./script.js"></script>
 </body>
-
 </html>
