@@ -625,13 +625,22 @@ footer{
     width: 90%;
     height: 40px;
     margin: 25px 15px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     border-bottom: 1px rgb(255, 255, 255) solid;
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     outline: none;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}
+
 
 .form__element:nth-of-type(1), .form__element:nth-of-type(2){
     width: 42%;
@@ -655,6 +664,7 @@ footer{
 .form__submit:hover{
     transform: scale(1.1);
 }
+
 
 @media (max-width: 1680px){
     .adventures{
