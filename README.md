@@ -1,6 +1,6 @@
 # Into The Wild 
 
-Project of adventure & photography focused group website
+Project of adventure & photography focused group landing page
 
 ## Live Preview
 
