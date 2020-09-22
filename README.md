@@ -1,6 +1,6 @@
 # Into The Wild 
 
-Project of adventure & photography focused group landing page
+Landing page project of adventure & photography focused group
 
 ## Live Preview
 
@@ -11,3 +11,5 @@ https://reymanov.github.io/Into-The-Wild/
 * HTML
 * CSS
 * JavaScript
+* AOS library
+
